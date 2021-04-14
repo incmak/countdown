@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- **************************Fonts*************************  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <!-- *****************************Fonts*********************** -->
+
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+  </head>
+  <body>
+     <div class="head-text"><p>Countdown for 18 September</p></div>
+    <div class="container">
+       
+      <div class="card">
+        <p class="time" id="days">00</p>
+        <span>Days</span>
+      </div>
+      <div class="card">
+        <p class="time" id="hours">00</p>
+        <span>Hours</span>
+      </div>
+      <div class="card">
+        <p class="time" id="minutes">00</p>
+        <span>Minutes</span>
+      </div>
+      <div class="card">
+        <p class="time" id="seconds">00</p>
+        <span>Seconds</span>
+      </div>
+    </div>
+    <p class="message">waiting <i class="fas fa-heart"></i> days</p>
+    <i id="light-dark-toogle" class="fas fa-sun"></i>
+  </body>
+  <script src="script.js"></script>
+</html>

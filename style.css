@@ -1,0 +1,131 @@
+:root {
+  --day-bg: #fff;
+  --day-cards: yellow;
+  --day-nums: ;
+  --night-bg: #000;
+  --night-head-text: yellow;
+  --day-head-text: #f00;
+  --night-cards: #f00;
+  --night-nums: #f1faee;
+  --sun: #f8e700;
+  --moon: ;
+}
+body {
+  background-color: var(--night-bg);
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  transition: background-color 0.5s;
+}
+.head-text {
+  font-family: "Vollkorn", serif;
+  color: var(--night-head-text);
+  font-size: 3em;
+  display: flex;
+  position: absolute;
+  margin-top: -7em;
+}
+@media (max-width: 780px) {
+  .head-text {
+    font-size: 1.7em;
+    position: absolute;
+    margin-top: -20em;
+  }
+}
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  position: relative;
+  width: 20vw;
+  height: 200px;
+  background-color: var(--night-cards);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s;
+}
+@media (max-width: 760px) {
+  .card {
+    height: 200px;
+    margin-top: 20px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+  }
+  .card {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.time {
+  font-size: 6rem;
+  font-weight: bold;
+  color: var(--night-nums);
+  transition: color 0.5s;
+}
+
+.card span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  color: var(--night-nums);
+  transition: color 0.5s;
+}
+
+.fas.fa-sun,
+.fas.fa-moon {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--sun);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+/* /////////////////////// Dark /////////////////// */
+body.dark {
+  background-color: var(--day-bg);
+}
+.dark .head-text {
+    color: var(--day-head-text);
+}
+.dark .card {
+  background: var(--day-cards);
+}
+
+.dark .time,
+.dark span {
+  color: var(--day-nums);
+}
+
+.dark .fas.fa-sun,
+.dark .fas.fa-moon {
+  color: var(--moon);
+}
+
+.message {
+  position: absolute;
+  bottom: -4rem;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #f8e700;
+  font-family: "Yellowtail", cursive;
+  visibility: hidden;
+}
+
+.dark .message {
+  color: #8d99ae;
+}
